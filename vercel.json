@@ -1,25 +1,9 @@
 {
   "version": 2,
   "name": "astroflora-7-1",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
+  "framework": "nextjs",
   "env": {
-    "NEXT_PUBLIC_API_URL": "@api-url"
+    "NEXT_PUBLIC_API_URL": "https://api.astroflora.com/api"
   },
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_API_URL": "https://api.astroflora.com/api"
-    }
-  },
-  "functions": {
-    "pages/api/**/*.js": {
-      "maxDuration": 30
-    }
-  },
-  "regions": ["iad1"],
-  "framework": "nextjs"
+  "regions": ["iad1"]
 }
